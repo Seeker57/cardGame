@@ -20,9 +20,9 @@
             <td><p style="text-align: center;">{{ card.name }}</p></td>
         
             {% for class in card.cardclass_set.all %}
-            <td><p style="text-align: center;">
-            {{class.class_field.name}}
-            </p></td>
+                <td><p style="text-align: center;">
+                {{class.class_field.name}}
+                </p></td>
             {% endfor %}
         <td>{% static 'cardArts' as static_images %}
         <p style="text-align: center;">

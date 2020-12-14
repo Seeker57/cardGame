@@ -9,46 +9,46 @@ class Card(models.Model):
     hp = models.IntegerField()
     description = models.CharField(max_length=100, blank=True, null=True)
     art_path = models.CharField(max_length=50, blank=True, null=True)
-    rarity = models.ForeignKey('Rarity', models.DO_NOTHING)
+    rarity = models.ForeignKey('Rarity', models.RESTRICT)
 
 
 class CardClass(models.Model):
-    card = models.ForeignKey(Card, models.DO_NOTHING)
-    class_field = models.ForeignKey('HeroClass', models.DO_NOTHING, db_column='class_id')
+    card = models.ForeignKey(Card, models.RESTRICT)
+    class_field = models.ForeignKey('HeroClass', models.RESTRICT, db_column='class_id')
 
 
 class CardDeck(models.Model):
-    card = models.ForeignKey(Card, models.DO_NOTHING)
-    deck = models.ForeignKey('Deck', models.DO_NOTHING)
+    card = models.ForeignKey(Card, models.CASCADE)
+    deck = models.ForeignKey('Deck', models.CASCADE)
 
 
 class CardMechanic(models.Model):
-    card = models.ForeignKey(Card, models.DO_NOTHING)
-    mechanic = models.ForeignKey('Mechanic', models.DO_NOTHING)
+    card = models.ForeignKey(Card, models.RESTRICT)
+    mechanic = models.ForeignKey('Mechanic', models.RESTRICT)
 
 
 class CardPlayer(models.Model):
-    card = models.ForeignKey(Card, models.DO_NOTHING)
-    player = models.ForeignKey('Player', models.DO_NOTHING)
+    card = models.ForeignKey(Card, models.CASCADE)
+    player = models.ForeignKey('Player', models.CASCADE)
 
 
 class CardType(models.Model):
-    card = models.ForeignKey(Card, models.DO_NOTHING)
-    type = models.ForeignKey('TypeCard', models.DO_NOTHING)
+    card = models.ForeignKey(Card, models.RESTRICT)
+    type = models.ForeignKey('TypeCard', models.RESTRICT)
 
 
 class Deck(models.Model):
     name = models.CharField(max_length=30, blank=True, null=True)
-    hero = models.ForeignKey('Hero', models.DO_NOTHING)
-    player = models.ForeignKey('Player', models.DO_NOTHING)
+    hero = models.ForeignKey('Hero', models.CASCADE)
+    player = models.ForeignKey('Player', models.CASCADE)
 
 
 class Hero(models.Model):
     name = models.CharField(unique=True, max_length=30, blank=True, null=True)
     hp = models.IntegerField()
     art_path = models.CharField(max_length=50, blank=True, null=True)
-    class_field = models.ForeignKey('HeroClass', models.DO_NOTHING, db_column='class_id')
-    power = models.ForeignKey('HeroPower', models.DO_NOTHING)
+    class_field = models.ForeignKey('HeroClass', models.RESTRICT, db_column='class_id')
+    power = models.ForeignKey('HeroPower', models.RESTRICT)
 
 
 class HeroClass(models.Model):
@@ -84,3 +84,7 @@ class TypeCard(models.Model):
     name = models.CharField(unique=True, max_length=30, blank=True, null=True)
     description = models.CharField(max_length=50, blank=True, null=True)
 
+
+class HeroPlayer(models.Model):
+    hero = models.ForeignKey(Hero, models.CASCADE)
+    player = models.ForeignKey(Player, models.CASCADE)

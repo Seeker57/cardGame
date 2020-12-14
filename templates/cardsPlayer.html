@@ -7,9 +7,9 @@
 </head>
 <body>
     <h1>Веб-приложение карточной игры</h1>
-    <form action="/" method="GET">
+    <form action="history.back()" method="GET">
     {% csrf_token %}
-    <input type="submit" value="На главную" name="cardsButton">
+    <input type="submit" value="Назад" name="cardsButton">
     </form>
     {% if cards.count > 0 %}
     <h2>Список карт игрока {{player.nickname}}</h2>

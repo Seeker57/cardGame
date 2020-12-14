@@ -19,11 +19,13 @@ from cardGame import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.auth),
+    path('', views.mainStr, name='main'),
     path('cards/', views.cards, name='cards'),
     path('heroes/', views.hero, name='heroes'),
     path('auth/', views.auth, name='auth'),
     path('reg/', views.reg, name='reg'),
-    re_path(r'users/(?P<name>\D+)/cards', views.usersCards, name='usersCards'),
-    re_path(r'users/(?P<name>\D+)/', views.users, name='users'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/cards', views.usersCards, name='usersCards'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/heroes', views.usersHeroes, name='usersHeroes'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/decks', views.usersDecks, name='usersDecks'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/', views.users, name='users'),
 ]
