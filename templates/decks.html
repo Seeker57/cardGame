@@ -14,7 +14,7 @@
     {% if decks.count > 0 %}
     <h2>Список колод игрока {{player.nickname}}</h2>
     <table>
-        <tr><th>Id</th><th>Название</th><th>Герой</th><th>Карты</th></tr>
+        <tr><th>Id</th><th>Название</th><th>Герой</th><th>Описание класса</th></tr>
         {% for deck in decks %}
         <tr><td>{{ deck.id }}</td>
         <td><p style="text-align: center;">{{ deck.name }}</p></td>
@@ -22,15 +22,24 @@
         <td><p style="text-align: center;">
             <IMG src="{{ static_images }}/{{ deck.hero.art_path }}.jpg" width=30% height=30% alt="here must be an image">
         </p></td>
-        <td>{% for card in deck.carddeck_set.all %}
-            <table><tr>{% static 'cardArts' as static_images %}
+        <td><p style="text-align: center;">{{ deck.hero.class_field.feature }}</p></td></tr>
+        <table>{% for card in deck.carddeck_set.all %}
+            <td>{% if not forloop.counter0|divisibleby:"4" %}
+            {% static 'cardArts' as static_images %}
             <p style="text-align: center;">
                 <td><IMG src="{{ static_images }}/{{ card.card.art_path }}.png" width=50% height=50% alt="here must be an image"></td>
-            </p></tr></table>
-        {% endfor %}</td>
-        </tr>
+            </p>
+            {% else %}
+            </td><tr></tr>
+            <td>{% static 'cardArts' as static_images %}
+            <p style="text-align: center;">
+                <td><IMG src="{{ static_images }}/{{ card.card.art_path }}.png" width=50% height=50% alt="here must be an image"></td>
+            </p>
+            </td>
+            {% endif %}
         {% endfor %}
-        <td><p style="text-align: center;">{{hero.hero.class_field.feature}}</p></td>
+        </table>
+        {% endfor %}
     </table>
     {% endif %}
 </body>
