@@ -26,6 +26,10 @@ urlpatterns = [
     path('reg/', views.reg, name='reg'),
     re_path(r'users/(?P<name>[a-zA-Z0-9]+)/cards', views.usersCards, name='usersCards'),
     re_path(r'users/(?P<name>[a-zA-Z0-9]+)/heroes', views.usersHeroes, name='usersHeroes'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/createDeck', views.createDeck, name='createDeck'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/deleteDeck', views.deleteDeck, name='deleteDeck'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/editDeck/deck(?P<deckID>\d+)', views.deck, name='deck'),
+    re_path(r'users/(?P<name>[a-zA-Z0-9]+)/editDeck', views.editDeck, name='editDeck'),
     re_path(r'users/(?P<name>[a-zA-Z0-9]+)/decks', views.usersDecks, name='usersDecks'),
     re_path(r'users/(?P<name>[a-zA-Z0-9]+)/', views.users, name='users'),
 ]

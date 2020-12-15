@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Card Game</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <input type="submit" value="Подтвердить" >
+    </form>
+
+    <h2>Доступные карты</h2>
+    <table>
+        <tr><th>Id</th><th>Название</th><th>Класс</th><th>Арт</th></tr>
+        {% for card in cards %}
+        <tr><td><p style="text-align: center;">{{ card.card.id }}</p></td>
+            <td><p style="text-align: center;">{{ card.card.name }}</p></td>
+        
+            {% for class in card.card.cardclass_set.all %}
+            <td><p style="text-align: center;">
+            {{class.class_field.name}}
+            </p></td>
+            {% endfor %}
+        <td>{% static 'cardArts' as static_images %}
+        <p style="text-align: center;">
+            <IMG src="{{ static_images }}/{{ card.card.art_path }}.png" width=50% height=50% alt="here must be an image">
+        </p></td></tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
