@@ -1,4 +1,5 @@
 from django.db import models
+from postgres_copy import CopyManager
 
 # Create your models here.
 
@@ -72,6 +73,7 @@ class Player(models.Model):
     login = models.CharField(unique=True, max_length=30, blank=True, null=True)
     password = models.CharField(max_length=30, blank=True, null=True)
     resourses = models.IntegerField()
+    objects = CopyManager()
 
 
 class Rarity(models.Model):

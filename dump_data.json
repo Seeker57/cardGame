@@ -1,0 +1,1680 @@
+[
+{
+   "model": "auth.permission",
+   "pk": 1,
+   "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 2,
+   "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 3,
+   "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 4,
+   "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 5,
+   "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 6,
+   "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 7,
+   "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 8,
+   "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 9,
+   "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 10,
+   "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 11,
+   "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 12,
+   "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 13,
+   "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 14,
+   "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 15,
+   "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 16,
+   "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 17,
+   "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 18,
+   "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 19,
+   "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 20,
+   "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 21,
+   "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 22,
+   "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 23,
+   "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 24,
+   "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 25,
+   "fields": {
+      "name": "Can add card",
+      "content_type": 7,
+      "codename": "add_card"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 26,
+   "fields": {
+      "name": "Can change card",
+      "content_type": 7,
+      "codename": "change_card"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 27,
+   "fields": {
+      "name": "Can delete card",
+      "content_type": 7,
+      "codename": "delete_card"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 28,
+   "fields": {
+      "name": "Can view card",
+      "content_type": 7,
+      "codename": "view_card"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 29,
+   "fields": {
+      "name": "Can add hero class",
+      "content_type": 8,
+      "codename": "add_heroclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 30,
+   "fields": {
+      "name": "Can change hero class",
+      "content_type": 8,
+      "codename": "change_heroclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 31,
+   "fields": {
+      "name": "Can delete hero class",
+      "content_type": 8,
+      "codename": "delete_heroclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 32,
+   "fields": {
+      "name": "Can view hero class",
+      "content_type": 8,
+      "codename": "view_heroclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 33,
+   "fields": {
+      "name": "Can add hero power",
+      "content_type": 9,
+      "codename": "add_heropower"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 34,
+   "fields": {
+      "name": "Can change hero power",
+      "content_type": 9,
+      "codename": "change_heropower"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 35,
+   "fields": {
+      "name": "Can delete hero power",
+      "content_type": 9,
+      "codename": "delete_heropower"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 36,
+   "fields": {
+      "name": "Can view hero power",
+      "content_type": 9,
+      "codename": "view_heropower"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 37,
+   "fields": {
+      "name": "Can add mechanic",
+      "content_type": 10,
+      "codename": "add_mechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 38,
+   "fields": {
+      "name": "Can change mechanic",
+      "content_type": 10,
+      "codename": "change_mechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 39,
+   "fields": {
+      "name": "Can delete mechanic",
+      "content_type": 10,
+      "codename": "delete_mechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 40,
+   "fields": {
+      "name": "Can view mechanic",
+      "content_type": 10,
+      "codename": "view_mechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 41,
+   "fields": {
+      "name": "Can add player",
+      "content_type": 11,
+      "codename": "add_player"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 42,
+   "fields": {
+      "name": "Can change player",
+      "content_type": 11,
+      "codename": "change_player"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 43,
+   "fields": {
+      "name": "Can delete player",
+      "content_type": 11,
+      "codename": "delete_player"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 44,
+   "fields": {
+      "name": "Can view player",
+      "content_type": 11,
+      "codename": "view_player"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 45,
+   "fields": {
+      "name": "Can add rarity",
+      "content_type": 12,
+      "codename": "add_rarity"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 46,
+   "fields": {
+      "name": "Can change rarity",
+      "content_type": 12,
+      "codename": "change_rarity"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 47,
+   "fields": {
+      "name": "Can delete rarity",
+      "content_type": 12,
+      "codename": "delete_rarity"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 48,
+   "fields": {
+      "name": "Can view rarity",
+      "content_type": 12,
+      "codename": "view_rarity"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 49,
+   "fields": {
+      "name": "Can add type card",
+      "content_type": 13,
+      "codename": "add_typecard"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 50,
+   "fields": {
+      "name": "Can change type card",
+      "content_type": 13,
+      "codename": "change_typecard"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 51,
+   "fields": {
+      "name": "Can delete type card",
+      "content_type": 13,
+      "codename": "delete_typecard"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 52,
+   "fields": {
+      "name": "Can view type card",
+      "content_type": 13,
+      "codename": "view_typecard"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 53,
+   "fields": {
+      "name": "Can add hero",
+      "content_type": 14,
+      "codename": "add_hero"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 54,
+   "fields": {
+      "name": "Can change hero",
+      "content_type": 14,
+      "codename": "change_hero"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 55,
+   "fields": {
+      "name": "Can delete hero",
+      "content_type": 14,
+      "codename": "delete_hero"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 56,
+   "fields": {
+      "name": "Can view hero",
+      "content_type": 14,
+      "codename": "view_hero"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 57,
+   "fields": {
+      "name": "Can add deck",
+      "content_type": 15,
+      "codename": "add_deck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 58,
+   "fields": {
+      "name": "Can change deck",
+      "content_type": 15,
+      "codename": "change_deck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 59,
+   "fields": {
+      "name": "Can delete deck",
+      "content_type": 15,
+      "codename": "delete_deck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 60,
+   "fields": {
+      "name": "Can view deck",
+      "content_type": 15,
+      "codename": "view_deck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 61,
+   "fields": {
+      "name": "Can add card type",
+      "content_type": 16,
+      "codename": "add_cardtype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 62,
+   "fields": {
+      "name": "Can change card type",
+      "content_type": 16,
+      "codename": "change_cardtype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 63,
+   "fields": {
+      "name": "Can delete card type",
+      "content_type": 16,
+      "codename": "delete_cardtype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 64,
+   "fields": {
+      "name": "Can view card type",
+      "content_type": 16,
+      "codename": "view_cardtype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 65,
+   "fields": {
+      "name": "Can add card player",
+      "content_type": 17,
+      "codename": "add_cardplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 66,
+   "fields": {
+      "name": "Can change card player",
+      "content_type": 17,
+      "codename": "change_cardplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 67,
+   "fields": {
+      "name": "Can delete card player",
+      "content_type": 17,
+      "codename": "delete_cardplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 68,
+   "fields": {
+      "name": "Can view card player",
+      "content_type": 17,
+      "codename": "view_cardplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 69,
+   "fields": {
+      "name": "Can add card mechanic",
+      "content_type": 18,
+      "codename": "add_cardmechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 70,
+   "fields": {
+      "name": "Can change card mechanic",
+      "content_type": 18,
+      "codename": "change_cardmechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 71,
+   "fields": {
+      "name": "Can delete card mechanic",
+      "content_type": 18,
+      "codename": "delete_cardmechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 72,
+   "fields": {
+      "name": "Can view card mechanic",
+      "content_type": 18,
+      "codename": "view_cardmechanic"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 73,
+   "fields": {
+      "name": "Can add card deck",
+      "content_type": 19,
+      "codename": "add_carddeck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 74,
+   "fields": {
+      "name": "Can change card deck",
+      "content_type": 19,
+      "codename": "change_carddeck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 75,
+   "fields": {
+      "name": "Can delete card deck",
+      "content_type": 19,
+      "codename": "delete_carddeck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 76,
+   "fields": {
+      "name": "Can view card deck",
+      "content_type": 19,
+      "codename": "view_carddeck"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 77,
+   "fields": {
+      "name": "Can add card class",
+      "content_type": 20,
+      "codename": "add_cardclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 78,
+   "fields": {
+      "name": "Can change card class",
+      "content_type": 20,
+      "codename": "change_cardclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 79,
+   "fields": {
+      "name": "Can delete card class",
+      "content_type": 20,
+      "codename": "delete_cardclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 80,
+   "fields": {
+      "name": "Can view card class",
+      "content_type": 20,
+      "codename": "view_cardclass"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 81,
+   "fields": {
+      "name": "Can add hero player",
+      "content_type": 21,
+      "codename": "add_heroplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 82,
+   "fields": {
+      "name": "Can change hero player",
+      "content_type": 21,
+      "codename": "change_heroplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 83,
+   "fields": {
+      "name": "Can delete hero player",
+      "content_type": 21,
+      "codename": "delete_heroplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 84,
+   "fields": {
+      "name": "Can view hero player",
+      "content_type": 21,
+      "codename": "view_heroplayer"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 85,
+   "fields": {
+      "name": "Can add cron job log",
+      "content_type": 22,
+      "codename": "add_cronjoblog"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 86,
+   "fields": {
+      "name": "Can change cron job log",
+      "content_type": 22,
+      "codename": "change_cronjoblog"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 87,
+   "fields": {
+      "name": "Can delete cron job log",
+      "content_type": 22,
+      "codename": "delete_cronjoblog"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 88,
+   "fields": {
+      "name": "Can view cron job log",
+      "content_type": 22,
+      "codename": "view_cronjoblog"
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 1,
+   "fields": {
+      "password": "pbkdf2_sha256$216000$bDfJDDHNkL86$k/OxWyf0jQ4Pu05cOT6/EUoHqM8dZHRudMWwoW3Qr6g=",
+      "last_login": "2020-12-13T11:01:24.618Z",
+      "is_superuser": true,
+      "username": "cellbit",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-12-13T11:00:56.198Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 1,
+   "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 2,
+   "fields": {
+      "app_label": "auth",
+      "model": "permission"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 3,
+   "fields": {
+      "app_label": "auth",
+      "model": "group"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 4,
+   "fields": {
+      "app_label": "auth",
+      "model": "user"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 5,
+   "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 6,
+   "fields": {
+      "app_label": "sessions",
+      "model": "session"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 7,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "card"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 8,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "heroclass"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 9,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "heropower"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 10,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "mechanic"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 11,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "player"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 12,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "rarity"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 13,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "typecard"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 14,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "hero"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 15,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "deck"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 16,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "cardtype"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 17,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "cardplayer"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 18,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "cardmechanic"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 19,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "carddeck"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 20,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "cardclass"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 21,
+   "fields": {
+      "app_label": "cardGame",
+      "model": "heroplayer"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 22,
+   "fields": {
+      "app_label": "django_cron",
+      "model": "cronjoblog"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "ykfs72ayalwmpspn5gye79uaq8s6zv5f",
+   "fields": {
+      "session_data": ".eJxVzLkOwjAQBNB_cY0sH_gIJT3fYO161ziAHClHhfh3HCkFtDNv5i0SbGtN28JzGklchBan3wwhP7ntBT2g3SeZp7bOI8qdyKNd5G0ifl0P-3dQYal9XTB7zucSvRkC5sDaOHAcFFui4CFGJKti6cIMYDMGXZidQttBICM-XwhMONE:1koP80:oDMEcmszoy4YUiBDzEK8vjXbd4CdwRTPUSSjVKkc5jg",
+      "expire_date": "2020-12-27T11:01:24.621Z"
+   }
+},
+{
+   "model": "cardGame.card",
+   "pk": 1,
+   "fields": {
+      "name": "Сатир-надзиратель",
+      "mana": 3,
+      "attack": 4,
+      "hp": 2,
+      "description": "После того, как ваш герой атакует, призывает сатира 2/2",
+      "art_path": "satyr",
+      "rarity": 5
+   }
+},
+{
+   "model": "cardGame.card",
+   "pk": 2,
+   "fields": {
+      "name": "Суперзлодей Рафаам",
+      "mana": 7,
+      "attack": 7,
+      "hp": 8,
+      "description": "Провокация. Боевой клич: заменяет карты в вашей руке и колоде легендарными существами",
+      "art_path": "rafaam",
+      "rarity": 4
+   }
+},
+{
+   "model": "cardGame.card",
+   "pk": 3,
+   "fields": {
+      "name": "Гнев",
+      "mana": 2,
+      "attack": 0,
+      "hp": 0,
+      "description": "Выберете эффект, наносит существу 3 ед. урона или наносит существу 1 ед. и вы берете карту",
+      "art_path": "rage",
+      "rarity": 1
+   }
+},
+{
+   "model": "cardGame.card",
+   "pk": 4,
+   "fields": {
+      "name": "Верховный маг Антонидас",
+      "mana": 7,
+      "attack": 5,
+      "hp": 7,
+      "description": "Когда вы применяете заклинание, вы кладете в руку \"Огненный шар\"",
+      "art_path": "antonidas",
+      "rarity": 4
+   }
+},
+{
+   "model": "cardGame.card",
+   "pk": 5,
+   "fields": {
+      "name": "Вепрь-камнеклык",
+      "mana": 1,
+      "attack": 1,
+      "hp": 1,
+      "description": "Рывок",
+      "art_path": "boar",
+      "rarity": 5
+   }
+},
+{
+   "model": "cardGame.cardclass",
+   "pk": 1,
+   "fields": {
+      "card": 3,
+      "class_field": 3
+   }
+},
+{
+   "model": "cardGame.cardclass",
+   "pk": 2,
+   "fields": {
+      "card": 4,
+      "class_field": 4
+   }
+},
+{
+   "model": "cardGame.cardclass",
+   "pk": 3,
+   "fields": {
+      "card": 1,
+      "class_field": 2
+   }
+},
+{
+   "model": "cardGame.cardclass",
+   "pk": 4,
+   "fields": {
+      "card": 2,
+      "class_field": 1
+   }
+},
+{
+   "model": "cardGame.cardclass",
+   "pk": 5,
+   "fields": {
+      "card": 5,
+      "class_field": 5
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 34,
+   "fields": {
+      "card": 1,
+      "deck": 9
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 35,
+   "fields": {
+      "card": 5,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 36,
+   "fields": {
+      "card": 5,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 37,
+   "fields": {
+      "card": 5,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 38,
+   "fields": {
+      "card": 5,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 39,
+   "fields": {
+      "card": 5,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 40,
+   "fields": {
+      "card": 5,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 41,
+   "fields": {
+      "card": 5,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 42,
+   "fields": {
+      "card": 1,
+      "deck": 10
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 45,
+   "fields": {
+      "card": 1,
+      "deck": 9
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 49,
+   "fields": {
+      "card": 3,
+      "deck": 12
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 50,
+   "fields": {
+      "card": 3,
+      "deck": 12
+   }
+},
+{
+   "model": "cardGame.carddeck",
+   "pk": 51,
+   "fields": {
+      "card": 1,
+      "deck": 13
+   }
+},
+{
+   "model": "cardGame.cardmechanic",
+   "pk": 3,
+   "fields": {
+      "card": 2,
+      "mechanic": 1
+   }
+},
+{
+   "model": "cardGame.cardmechanic",
+   "pk": 4,
+   "fields": {
+      "card": 2,
+      "mechanic": 2
+   }
+},
+{
+   "model": "cardGame.cardmechanic",
+   "pk": 5,
+   "fields": {
+      "card": 5,
+      "mechanic": 3
+   }
+},
+{
+   "model": "cardGame.cardplayer",
+   "pk": 3,
+   "fields": {
+      "card": 1,
+      "player": 1
+   }
+},
+{
+   "model": "cardGame.cardplayer",
+   "pk": 4,
+   "fields": {
+      "card": 2,
+      "player": 1
+   }
+},
+{
+   "model": "cardGame.cardplayer",
+   "pk": 5,
+   "fields": {
+      "card": 3,
+      "player": 4
+   }
+},
+{
+   "model": "cardGame.cardplayer",
+   "pk": 6,
+   "fields": {
+      "card": 4,
+      "player": 4
+   }
+},
+{
+   "model": "cardGame.cardplayer",
+   "pk": 15,
+   "fields": {
+      "card": 1,
+      "player": 15
+   }
+},
+{
+   "model": "cardGame.cardplayer",
+   "pk": 16,
+   "fields": {
+      "card": 5,
+      "player": 15
+   }
+},
+{
+   "model": "cardGame.cardtype",
+   "pk": 3,
+   "fields": {
+      "card": 1,
+      "type": 2
+   }
+},
+{
+   "model": "cardGame.cardtype",
+   "pk": 4,
+   "fields": {
+      "card": 2,
+      "type": 1
+   }
+},
+{
+   "model": "cardGame.deck",
+   "pk": 9,
+   "fields": {
+      "name": "wtf",
+      "hero": 2,
+      "player": 1
+   }
+},
+{
+   "model": "cardGame.deck",
+   "pk": 10,
+   "fields": {
+      "name": "asfsafa",
+      "hero": 2,
+      "player": 15
+   }
+},
+{
+   "model": "cardGame.deck",
+   "pk": 12,
+   "fields": {
+      "name": "Член",
+      "hero": 3,
+      "player": 4
+   }
+},
+{
+   "model": "cardGame.deck",
+   "pk": 13,
+   "fields": {
+      "name": "myDick",
+      "hero": 4,
+      "player": 1
+   }
+},
+{
+   "model": "cardGame.hero",
+   "pk": 1,
+   "fields": {
+      "name": "Гулдан",
+      "hp": 30,
+      "art_path": "guldan",
+      "class_field": 1,
+      "power": 2
+   }
+},
+{
+   "model": "cardGame.hero",
+   "pk": 2,
+   "fields": {
+      "name": "Иллидан Ярость Бури",
+      "hp": 30,
+      "art_path": "illidan",
+      "class_field": 2,
+      "power": 1
+   }
+},
+{
+   "model": "cardGame.hero",
+   "pk": 3,
+   "fields": {
+      "name": "Малфурион",
+      "hp": 30,
+      "art_path": "malfurion",
+      "class_field": 3,
+      "power": 3
+   }
+},
+{
+   "model": "cardGame.hero",
+   "pk": 4,
+   "fields": {
+      "name": "Джайна",
+      "hp": 30,
+      "art_path": "djayna",
+      "class_field": 4,
+      "power": 4
+   }
+},
+{
+   "model": "cardGame.heroclass",
+   "pk": 1,
+   "fields": {
+      "name": "Чернокнижник",
+      "feature": "Герой, специализирующийся на рискованный игре. Вызывает сильных демонов, жертвуя при этом своим здоровьем.\n  Имеется возможность добирать карты"
+   }
+},
+{
+   "model": "cardGame.heroclass",
+   "pk": 2,
+   "fields": {
+      "name": "Охотник на демонов",
+      "feature": "Агрессивный герой, атакающий противников своим оружием или силой героя.\n  Также играет большими существами-демонами."
+   }
+},
+{
+   "model": "cardGame.heroclass",
+   "pk": 3,
+   "fields": {
+      "name": "Друид",
+      "feature": "Герой, специализирующийся на сильных, но дорогих существах, некоторые карты друида могут предоставлять выбор эффекта \n перед использованием."
+   }
+},
+{
+   "model": "cardGame.heroclass",
+   "pk": 4,
+   "fields": {
+      "name": "Маг",
+      "feature": "Герой, сфокусированный на магии. Использует большое количество мощных заклинаний и секретов"
+   }
+},
+{
+   "model": "cardGame.heroclass",
+   "pk": 5,
+   "fields": {
+      "name": "Общая",
+      "feature": "Карты для всех классов"
+   }
+},
+{
+   "model": "cardGame.heropower",
+   "pk": 1,
+   "fields": {
+      "name": "Когти демона",
+      "mana": 1,
+      "description": "+1 к атаке до конца хода"
+   }
+},
+{
+   "model": "cardGame.heropower",
+   "pk": 2,
+   "fields": {
+      "name": "Жизнеотвод",
+      "mana": 2,
+      "description": "Вы берете карту и получаете 2 ед. урона"
+   }
+},
+{
+   "model": "cardGame.heropower",
+   "pk": 3,
+   "fields": {
+      "name": "Смена облика",
+      "mana": 2,
+      "description": "+1 к атаке до конца хода. +1 к броне."
+   }
+},
+{
+   "model": "cardGame.heropower",
+   "pk": 4,
+   "fields": {
+      "name": "Вспышка огня",
+      "mana": 2,
+      "description": "Наносит 1 ед. урона."
+   }
+},
+{
+   "model": "cardGame.mechanic",
+   "pk": 1,
+   "fields": {
+      "name": "Провокация",
+      "description": "Противники вынуждены атаковать это существо"
+   }
+},
+{
+   "model": "cardGame.mechanic",
+   "pk": 2,
+   "fields": {
+      "name": "Боевой клич",
+      "description": "Бонусный эффект при разыгрывании из руки"
+   }
+},
+{
+   "model": "cardGame.mechanic",
+   "pk": 3,
+   "fields": {
+      "name": "Рывок",
+      "description": "Может атаковать сразу же"
+   }
+},
+{
+   "model": "cardGame.player",
+   "pk": 1,
+   "fields": {
+      "nickname": "Seeker",
+      "login": "seeker57@gmail.com",
+      "password": "qwerty123",
+      "resourses": 0
+   }
+},
+{
+   "model": "cardGame.player",
+   "pk": 4,
+   "fields": {
+      "nickname": "Jaja",
+      "login": "jaja@yandex.ru",
+      "password": "456",
+      "resourses": 0
+   }
+},
+{
+   "model": "cardGame.player",
+   "pk": 15,
+   "fields": {
+      "nickname": "Cellbit",
+      "login": "andrey.belyaev.2000@yandex.ru",
+      "password": "etumer85",
+      "resourses": 0
+   }
+},
+{
+   "model": "cardGame.rarity",
+   "pk": 1,
+   "fields": {
+      "type_rarity": "Обычная",
+      "cost_create": 40,
+      "cost_destruct": 5
+   }
+},
+{
+   "model": "cardGame.rarity",
+   "pk": 2,
+   "fields": {
+      "type_rarity": "Редкая",
+      "cost_create": 100,
+      "cost_destruct": 20
+   }
+},
+{
+   "model": "cardGame.rarity",
+   "pk": 3,
+   "fields": {
+      "type_rarity": "Эпическая",
+      "cost_create": 400,
+      "cost_destruct": 100
+   }
+},
+{
+   "model": "cardGame.rarity",
+   "pk": 4,
+   "fields": {
+      "type_rarity": "Легендарная",
+      "cost_create": 1600,
+      "cost_destruct": 400
+   }
+},
+{
+   "model": "cardGame.rarity",
+   "pk": 5,
+   "fields": {
+      "type_rarity": "Коллекционная",
+      "cost_create": 0,
+      "cost_destruct": 0
+   }
+},
+{
+   "model": "cardGame.typecard",
+   "pk": 1,
+   "fields": {
+      "name": "Обычный",
+      "description": "обычное существо без каких либо особенностей"
+   }
+},
+{
+   "model": "cardGame.typecard",
+   "pk": 2,
+   "fields": {
+      "name": "Демон",
+      "description": "существо - демон"
+   }
+},
+{
+   "model": "cardGame.heroplayer",
+   "pk": 1,
+   "fields": {
+      "hero": 1,
+      "player": 1
+   }
+},
+{
+   "model": "cardGame.heroplayer",
+   "pk": 2,
+   "fields": {
+      "hero": 2,
+      "player": 1
+   }
+},
+{
+   "model": "cardGame.heroplayer",
+   "pk": 4,
+   "fields": {
+      "hero": 3,
+      "player": 4
+   }
+},
+{
+   "model": "cardGame.heroplayer",
+   "pk": 5,
+   "fields": {
+      "hero": 4,
+      "player": 4
+   }
+},
+{
+   "model": "django_cron.cronjoblog",
+   "pk": 1,
+   "fields": {
+      "code": "cardGame.saveDump",
+      "start_time": "2020-12-15T23:13:05.578Z",
+      "end_time": "2020-12-15T23:13:05.661Z",
+      "is_success": false,
+      "message": "heck\n    manager.run(force)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django_cron\\__init__.py\", line 215, in run\n    self.msg = self.cron_job.do()\n  File \"C:\\Users\\Cellbit\\Desktop\\study\\БД\\курсач\\webCardGameDB\\cardGame\\cron.py\", line 12, in do\n    call_command('dumpdata', 'model_name', format='json', indent=3, stdout=output)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\__init__.py\", line 168, in call_command\n    return command.execute(*args, **defaults)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\base.py\", line 371, in execute\n    output = self.handle(*args, **options)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\commands\\dumpdata.py\", line 127, in handle\n    raise CommandError(str(e))\ndjango.core.management.base.CommandError: No installed app with label 'model_name'.\n",
+      "ran_at_time": null
+   }
+},
+{
+   "model": "django_cron.cronjoblog",
+   "pk": 2,
+   "fields": {
+      "code": "cardGame.saveDump",
+      "start_time": "2020-12-15T23:15:29.289Z",
+      "end_time": "2020-12-15T23:15:29.352Z",
+      "is_success": false,
+      "message": "un_cron_with_cache_check\n    manager.run(force)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django_cron\\__init__.py\", line 215, in run\n    self.msg = self.cron_job.do()\n  File \"C:\\Users\\Cellbit\\Desktop\\study\\БД\\курсач\\webCardGameDB\\cardGame\\cron.py\", line 12, in do\n    call_command('dumpdata', '', format='json', indent=3, stdout=output)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\__init__.py\", line 168, in call_command\n    return command.execute(*args, **defaults)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\base.py\", line 371, in execute\n    output = self.handle(*args, **options)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\commands\\dumpdata.py\", line 127, in handle\n    raise CommandError(str(e))\ndjango.core.management.base.CommandError: No installed app with label ''.\n",
+      "ran_at_time": null
+   }
+},
+{
+   "model": "django_cron.cronjoblog",
+   "pk": 3,
+   "fields": {
+      "code": "cardGame.saveDump",
+      "start_time": "2020-12-15T23:15:55.504Z",
+      "end_time": "2020-12-15T23:15:55.571Z",
+      "is_success": false,
+      "message": "_cache_check\n    manager.run(force)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django_cron\\__init__.py\", line 215, in run\n    self.msg = self.cron_job.do()\n  File \"C:\\Users\\Cellbit\\Desktop\\study\\БД\\курсач\\webCardGameDB\\cardGame\\cron.py\", line 12, in do\n    call_command('dumpdata', 'Player', format='json', indent=3, stdout=output)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\__init__.py\", line 168, in call_command\n    return command.execute(*args, **defaults)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\base.py\", line 371, in execute\n    output = self.handle(*args, **options)\n  File \"C:\\Users\\Cellbit\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\django\\core\\management\\commands\\dumpdata.py\", line 127, in handle\n    raise CommandError(str(e))\ndjango.core.management.base.CommandError: No installed app with label 'Player'.\n",
+      "ran_at_time": null
+   }
+},
+{
+   "model": "django_cron.cronjoblog",
+   "pk": 4,
+   "fields": {
+      "code": "cardGame.saveDump",
+      "start_time": "2020-12-15T23:17:02.650Z",
+      "end_time": "2020-12-15T23:17:02.796Z",
+      "is_success": true,
+      "message": "",
+      "ran_at_time": null
+   }
+},
+{
+   "model": "django_cron.cronjoblog",
+   "pk": 5,
+   "fields": {
+      "code": "cardGame.saveDump",
+      "start_time": "2020-12-15T23:30:39.417Z",
+      "end_time": "2020-12-15T23:30:39.659Z",
+      "is_success": true,
+      "message": "",
+      "ran_at_time": null
+   }
+},
+{
+   "model": "django_cron.cronjoblog",
+   "pk": 6,
+   "fields": {
+      "code": "cardGame.saveDump",
+      "start_time": "2020-12-15T23:32:56.865Z",
+      "end_time": "2020-12-15T23:32:56.998Z",
+      "is_success": true,
+      "message": "",
+      "ran_at_time": "02:34:00"
+   }
+},
+{
+   "model": "django_cron.cronjoblog",
+   "pk": 7,
+   "fields": {
+      "code": "cardGame.saveDump",
+      "start_time": "2020-12-15T23:39:17.630Z",
+      "end_time": "2020-12-15T23:39:17.720Z",
+      "is_success": true,
+      "message": "",
+      "ran_at_time": null
+   }
+}
+]
