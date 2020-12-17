@@ -1,21 +1,22 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Card Game</title>
-</head>
-<body>
+{% block title %}
+    Главная
+{% endblock title %}
+
+{% block content %}
+    {% static 'css' as style %}
+    <link rel="stylesheet" href="{{style}}/button.css" />
     <form method="POST">
         {% csrf_token %}
-    <table>
+    <table align="center" class="font1">
         {{ form }}
     </table>
     <input type="submit" value="Подтвердить" >
     </form>
 
-    <h2>Доступные карты</h2>
-    <table>
+    <h2 class="font1">Доступные карты</h2>
+    <table align="center" class="font1" border="1">
         <tr><th>Id</th><th>Название</th><th>Класс</th><th>Арт</th></tr>
         {% for card in cards %}
         <tr><td><p style="text-align: center;">{{ card.card.id }}</p></td>
@@ -32,6 +33,5 @@
         </p></td></tr>
         {% endfor %}
     </table>
+{% endblock %}
 
-</body>
-</html>

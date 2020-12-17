@@ -1,22 +1,23 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Card Game</title>
-</head>
-<body>
+{% block title %}
+    Главная
+{% endblock title %}
+
+{% block content %}
+    {% static 'css' as style %}
+    <link rel="stylesheet" href="{{style}}/button.css" />
     <form method="POST">
         {% csrf_token %}
-    <table>
+    <table align="center", class="font1">
         {{ form }}
     </table>
     <input type="submit" value="Подтвердить" >
     </form>
 
     {% if heroes.count > 0 %}
-    <h2>Список доступных героев</h2>
-    <table>
+    <h2 class="font1">Список доступных героев</h2>
+    <table align="center" class="font1" border="1">
         <tr><th>Id</th><th>Название</th><th>Сила героя</th><th>Описание класса</th><th>Арт</th></tr>
         {% for hero in heroes %}
             <tr><td>{{ hero.hero.id }}</td>
@@ -25,10 +26,9 @@
             <td><p style="text-align: center;">{{hero.hero.class_field.feature}}</p></td>
             <td>{% static 'heroArts' as static_images %}
             <p style="text-align: center;">
-                <IMG src="{{ static_images }}/{{ hero.hero.art_path }}.jpg" width=30% height=30% alt="here must be an image">
+                <IMG src="{{ static_images }}/{{ hero.hero.art_path }}.png" width=30% height=30% alt="here must be an image">
             </p></td></tr>
         {% endfor %}
     </table>
     {% endif %}
-</body>
-</html>
+{% endblock %}

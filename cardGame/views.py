@@ -1,20 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Rarity, Card, Hero, HeroClass, CardClass, Player, CardPlayer, Deck, CardDeck
+from .models import Rarity, Card, Hero, HeroClass, CardClass, Player, CardPlayer, Deck, CardDeck, HeroPlayer
 from .forms import AuthForm, RegForm, CreateDeck, EditDeck, AddCard
 # Create your views here.
 
 def mainStr(request):
     return render(request, "main.html")
 
+
 def home(request):
     return render(request, "home.html")
 
 
 def cards(request):
-    cards = Card.objects.all()
-    cardclass = CardClass.objects.all()
-    return render(request, "cards.html", {"cards" : cards, "cardclass" : cardclass})
+    cards = Card.objects.all().order_by('mana')
+    return render(request, "cards.html", {"cards" : cards})
 
 
 def usersCards(request, name):
@@ -23,7 +23,8 @@ def usersCards(request, name):
         cards = player[0].cardplayer_set.all()
         return render(request, "cardsPlayer.html", {"player" : player[0], "cards" :cards})
     else:
-        return HttpResponse("<h2>Пользователь не найден</h2>")
+        mess = "Пользователь " + name + " не найден"
+        return render(request, "infoMes.html", {"message" : mess})
 
 
 def usersHeroes(request, name):
@@ -32,7 +33,8 @@ def usersHeroes(request, name):
         heroes = player[0].heroplayer_set.all()
         return render(request, "heroUsers.html", {"player" : player[0], "heroes" : heroes})
     else:
-        return HttpResponse("<h2>Пользователь не найден</h2>")
+        mess = "Пользователь " + name + " не найден"
+        return render(request, "infoMes.html", {"message" : mess})
 
 
 def usersDecks(request, name):
@@ -41,7 +43,8 @@ def usersDecks(request, name):
         decks = player[0].deck_set.all()
         return render(request, "decks.html", {"player" : player[0], "decks" : decks})
     else:
-        return HttpResponse("<h2>Пользователь не найден</h2>")
+        mess = "Пользователь " + name + " не найден"
+        return render(request, "infoMes.html", {"message" : mess})
 
 
 def createDeck(request, name):
@@ -56,7 +59,7 @@ def createDeck(request, name):
                 newDeck.hero = deckHero[0]
             else:
                 mess = "Героя {0} не существует".format(request.POST.get("hero"))
-                return infoMessage(mess)
+                return render(request, "infoMes.html", {"message" : mess})
             newDeck.save()
             return HttpResponseRedirect("/users/" + name)
         else:
@@ -64,7 +67,8 @@ def createDeck(request, name):
             heroes = player[0].heroplayer_set.all()
             return render(request, "createDeck.html", {"form": createDeckForm, "heroes" : heroes})
     else:
-        return HttpResponse("<h2>Пользователь не найден</h2>")
+        mess = "Пользователь " + name + " не найден"
+        return render(request, "infoMes.html", {"message" : mess})
 
 
 def editDeck(request, name):
@@ -77,12 +81,13 @@ def editDeck(request, name):
                 return HttpResponseRedirect("/users/" + name + '/editDeck/deck' + deckID)
             else:
                 mess = "Колоды с id {0} не существует".format(deckID)
-                return infoMessage(mess)
+                return render(request, "infoMes.html", {"message" : mess})
         else:
             editDeck = EditDeck()
             return render(request, "editDeck.html", {"form" : editDeck})
     else:
-        return HttpResponse("<h2>Пользователь не найден</h2>")
+        mess = "Пользователь " + name + " не найден"
+        return render(request, "infoMes.html", {"message" : mess})
 
 
 def deleteDeck(request, name):
@@ -96,12 +101,13 @@ def deleteDeck(request, name):
                 return HttpResponseRedirect("/users/" + name + '/decks')
             else:
                 mess = "Колоды с id {0} не существует".format(deckID)
-                return infoMessage(mess)
+                return render(request, "infoMes.html", {"message" : mess})
         else:
             editDeck = EditDeck()
             return render(request, "editDeck.html", {"form" : editDeck})
     else:
-        return HttpResponse("<h2>Пользователь не найден</h2>")
+        mess = "Пользователь " + name + " не найден"
+        return render(request, "infoMes.html", {"message" : mess})
 
 
 def deck(request, name, deckID):
@@ -110,15 +116,26 @@ def deck(request, name, deckID):
         if request.method == "POST":
             playerCards = player[0].cardplayer_set.all()
             chooseCard = playerCards.filter(card = request.POST.get("cardID"))
-            if chooseCard:
-                newCardDeck = CardDeck()
-                newCardDeck.deck = Deck.objects.filter(id = int(deckID))[0]
-                newCardDeck.card = chooseCard[0].card
-                newCardDeck.save()
-                return HttpResponseRedirect("/users/" + name + '/decks')
+            copyCardInDeck = CardDeck.objects.filter(card = request.POST.get("cardID"), deck = deckID)
+            if (copyCardInDeck.count() < 2):
+                cardInDeck = CardDeck.objects.filter(deck = deckID)
+                if cardInDeck.count() < 30:
+                    if chooseCard:
+                        newCardDeck = CardDeck()
+                        newCardDeck.deck = Deck.objects.filter(id = int(deckID))[0]
+                        newCardDeck.card = chooseCard[0].card
+                        newCardDeck.save()
+                        return HttpResponseRedirect("/users/" + name + '/decks')
+                    else:
+                        mess = "Карты с id {0} у вас нет".format(request.POST.get("cardID"))
+                        return render(request, "infoMes.html", {"message" : mess})
+                else:
+                    mess = "Колода не может содержать больше 30 карт"
+                    return render(request, "infoMes.html", {"message" : mess})
             else:
-               mess = "Карты с id {0} у вас нет".format(request.POST.get("cardID"))
-               return infoMessage(mess) 
+                mess = "Колода не может содержать больше 2-х одинаковых карт"
+                return render(request, "infoMes.html", {"message" : mess})
+
 
         else:
             addCard = AddCard()
@@ -134,15 +151,8 @@ def deck(request, name, deckID):
                         break
             return render(request, "chooseCard.html", {"form" : addCard, "cards" : classCards})
     else:
-        return HttpResponse("<h2>Пользователь не найден</h2>")
-
-
-def infoMessage(message):
-    output = '<h2>' + message + '</h2>' +\
-             '<form>' +\
-             '<input type="button" value="Вернуться обратно" onclick="history.go(-2)">' +\
-             '</form>'
-    return HttpResponse(output)
+        mess = "Пользователь " + name + " не найден"
+        return render(request, "infoMes.html", {"message" : mess})
 
 
 def hero(request):
@@ -162,10 +172,10 @@ def auth(request):
                 return HttpResponseRedirect("/users/" + user[0].nickname)
             else:
                 mess = "Неверный пароль для {0}".format(loginUser)
-                return infoMessage(mess)
+                return render(request, "infoMes.html", {"message" : mess})
         else:
             mess = "Пользователь {0} не существует".format(loginUser)
-            return infoMessage(mess)
+            return render(request, "infoMes.html", {"message" : mess})
     else:
         authform = AuthForm()
         return render(request, "auth.html", {"form": authform})
@@ -191,14 +201,22 @@ def reg(request):
                     newLinkCardPlayer.player = newUser
                     newLinkCardPlayer.card = card
                     newLinkCardPlayer.save()
+
+                allHeroes = Hero.objects.all()
+                for hero in allHeroes:
+                    if hero.id in range(1, 11):
+                        newLinkHeroPlayer = HeroPlayer()
+                        newLinkHeroPlayer.player = newUser
+                        newLinkHeroPlayer.hero = hero
+                        newLinkHeroPlayer.save()
                 mess = "Аккаунт успешно создан"
-                return infoMessage(mess)
+                return render(request, "infoMes.html", {"message" : mess})
             else:
                 mess = "Пароли не совпадают"
-                return infoMessage(mess)
+                return render(request, "infoMes.html", {"message" : mess})
         else:
             mess = "<h2>Пользователь с таким ником или email'ом уже существует"
-            return infoMessage(mess)
+            return render(request, "infoMes.html", {"message" : mess})
     else:
         regForm = RegForm()
         return render(request, "auth.html", {"form" : regForm})

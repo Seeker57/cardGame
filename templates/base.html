@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Default title{% endblock title %}</title>
+    <style>
+        body {
+            text-align: center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .font1 {
+            font-size : 18px;
+            font-family : cursive;
+            color: beige;
+        }
+
+    </style>
+</head>
+<body bgcolor="98c793" style='background-image: url("{% static "heroArts/hearthstoneBody.jpg"%}")' >
+    <header>
+        {% static 'heroArts' as static_images %}
+        <p style="text-align: center;">
+            <IMG src="{{ static_images }}/hearthstone.png" width=40% height=40% alt="here must be an image">
+        </p>
+    </header>
+    <h2></h2>
+    <content>{% block content%}{% endblock content %}</content>
+</body>
+</html>

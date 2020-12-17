@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Card Game</title>
-</head>
-<body>
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Авторизация
+{% endblock title %}
+
+{% block content %}
+    {% static 'css' as style %}
+    <link rel="stylesheet" href="{{style}}/button.css" />
     <form method="POST">
-        {% csrf_token %}
-    <table>
-        {{ form }}
-    </table>
-    <input type="submit" value="Подтвердить" >
-</form>
-</body>
-</html>
+            {% csrf_token %}
+        <table align="center" class="font1">
+            {{ form }}
+        </table>
+        <input type="submit" value="Подтвердить" >
+    </form>
+{% endblock content %}

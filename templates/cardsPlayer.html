@@ -1,35 +1,43 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Card Game</title>
-</head>
-<body>
-    <h1>Веб-приложение карточной игры</h1>
+{% block title %}
+    Карты
+{% endblock title %}
+
+{% block content %}
+    {% static 'css' as style %}
+    <link rel="stylesheet" href="{{style}}/button.css" />
     <form action="history.back()" method="GET">
     {% csrf_token %}
     <input type="submit" value="Назад" name="cardsButton">
     </form>
     {% if cards.count > 0 %}
-    <h2>Список карт игрока {{player.nickname}}</h2>
-    <table>
-        <tr><th>Id</th><th>Название</th><th>Класс</th><th>Арт</th></tr>
+    <h2 class="font1">Список карт игрока {{player.nickname}}</h2>
+    <table align="center" class="font1" border="1">
+        <tr><th>Id</th><th>Название</th><th>Класс</th><th>Механики</th><th>Тип</th><th>Арт</th></tr>
         {% for card in cards %}
         <tr><td><p style="text-align: center;">{{ card.card.id }}</p></td>
             <td><p style="text-align: center;">{{ card.card.name }}</p></td>
         
             {% for class in card.card.cardclass_set.all %}
-            <td><p style="text-align: center;">
-            {{class.class_field.name}}
-            </p></td>
+                <td><p style="text-align: center;">
+                {{class.class_field.name}}
+                </p></td>
             {% endfor %}
+            <td><table align="center">{% for mechanic in card.card.cardmechanic_set.all %}
+                <tr><td>{{mechanic.mechanic.name}}: {{mechanic.mechanic.description}}</td></tr>
+            {% empty %} <h2>-</h2>
+            {% endfor %}</table></td>
+                {% for type in card.card.cardtype_set.all %}
+                    <td><p style="text-align: center;">
+                    {{type.type.name}}
+                    </p></td>
+                {% endfor %}
         <td>{% static 'cardArts' as static_images %}
         <p style="text-align: center;">
             <IMG src="{{ static_images }}/{{ card.card.art_path }}.png" width=50% height=50% alt="here must be an image">
         </p></td></tr>
         {% endfor %}
-    </table>
+    </table> 
     {% endif %}
-</body>
-</html>
+{% endblock %}

@@ -1,26 +1,29 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Card Game</title>
-</head>
-<body>
-    <h1>Веб-приложение карточной игры</h1>
+{% block title %}
+    Меню
+{% endblock title %}
+
+{% block content %}
+    {% static 'css' as style %}
+    <link rel="stylesheet" href="{{style}}/button.css" />
+    <h2></h2>
     <form action="auth" method="GET">
-    <input type="submit" value="Авторизоваться">
+    <input type="submit" value="Авторизоваться" >
     </form>
-    <h1></h1>
+    
+    <h2></h2>
     <form action="reg" method="GET">
     <input type="submit" value="Зарегистрироваться">
     </form>
-    <h1></h1>
+    
+    <h2></h2>
     <form action="cards" method="GET">
     <input type="submit" value="Посмотреть все карты">
     </form>
-    <h1></h1>
+
+    <h2></h2>
     <form action="heroes" method="GET">
     <input type="submit" value="Посмотреть всеx героев">
     </form>
-</body>
-</html>
+{% endblock content %}

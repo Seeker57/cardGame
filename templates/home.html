@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+
+{% extends "base.html" %}
 {% load static %}
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Card Game</title>
-</head>
-<body>
-    <h1>Веб-приложение карточной игры</h1>
+{% block title %}
+    Главная
+{% endblock title %}
+
+{% block content %}
+    {% static 'css' as style %}
+    <link rel="stylesheet" href="{{style}}/button.css" />
     <form action="cards" method="GET">
     <input type="submit" value="Карты">
     </form>
@@ -22,5 +23,4 @@
     <form action="/" method="GET">
     <input type="submit" value="Выйти">
     </form>
-</body>
-</html>
+{% endblock %}
